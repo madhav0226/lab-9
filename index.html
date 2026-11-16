@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Information - XML Data Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Employee Directory</h1>
+            <p>Read and render employee records dynamically from an XML data source into a tabular view</p>
+        </header>
+
+        <!-- Main Card Section -->
+        <div class="card">
+            <!-- Toolbar / Control Panel -->
+            <div class="toolbar">
+                <div class="action-buttons">
+                    <button id="btnFetchXml" class="btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Load employees.xml
+                    </button>
+
+                    <label for="xmlFileInput" class="file-upload-label" title="Upload or select any XML file directly">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="12" y1="18" x2="12" y2="12"></line>
+                            <line x1="9" y1="15" x2="15" y2="15"></line>
+                        </svg>
+                        Choose XML File
+                    </label>
+                    <input type="file" id="xmlFileInput" accept=".xml,text/xml">
+
+                    <button id="btnClear" class="btn-secondary" style="display: none;">
+                        Clear Table
+                    </button>
+                </div>
+
+                <!-- Search / Filter Box -->
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchInput" placeholder="Search by name, ID, or department..." disabled>
+                </div>
+            </div>
+
+            <!-- Status & Alert Messages -->
+            <div id="statusBar" class="status-bar"></div>
+
+            <!-- Summary Statistics -->
+            <div id="statsBar" class="stats-bar" style="display: none;">
+                <div class="stats-item">Total Employees: <span id="statTotal">0</span></div>
+                <div class="stats-item">Filtered Count: <span id="statFiltered">0</span></div>
+                <div class="stats-item">Departments: <span id="statDepts">0</span></div>
+            </div>
+
+            <!-- Table Container -->
+            <div class="table-wrapper">
+                <table id="employeeTable">
+                    <thead>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Full Name</th>
+                            <th>Department</th>
+                            <th>Designation</th>
+                            <th>Email Address</th>
+                            <th>Phone</th>
+                            <th>Salary (USD)</th>
+                            <th>Joining Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employeeTableBody">
+                        <!-- Populated dynamically via JavaScript -->
+                    </tbody>
+                </table>
+
+                <!-- Placeholder Empty State -->
+                <div id="emptyState" class="empty-state">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    <h3>No Data Loaded</h3>
+                    <p>Click "Load employees.xml" or select a local XML file to display employee records.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Academic / Practical Note for Lab Evaluation -->
+        <div class="info-note">
+            <strong>Lab Note:</strong> This application demonstrates reading XML data using both <code>fetch()</code> / <code>DOMParser()</code> and local file loading via <code>FileReader()</code>. When using <code>fetch()</code>, run through a local web server (e.g. VS Code Live Server or <code>python -m http.server</code>) to comply with browser CORS policies. If opened directly via <code>file:///</code> protocol, use the <strong>"Choose XML File"</strong> button to load <code>employees.xml</code> directly without browser security blocks.
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script src="script.js"></script>
+</body>
+</html>

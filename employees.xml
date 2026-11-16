@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company>
+    <employee id="EMP101">
+        <name>Alice Johnson</name>
+        <department>Engineering</department>
+        <designation>Senior Software Engineer</designation>
+        <email>alice.johnson@example.com</email>
+        <phone>+1 (555) 019-2834</phone>
+        <salary>85000</salary>
+        <joiningDate>2021-03-15</joiningDate>
+    </employee>
+    <employee id="EMP102">
+        <name>Bob Martinez</name>
+        <department>Marketing</department>
+        <designation>Digital Marketing Specialist</designation>
+        <email>bob.martinez@example.com</email>
+        <phone>+1 (555) 014-9921</phone>
+        <salary>62000</salary>
+        <joiningDate>2022-07-01</joiningDate>
+    </employee>
+    <employee id="EMP103">
+        <name>Catherine Smith</name>
+        <department>Human Resources</department>
+        <designation>HR Manager</designation>
+        <email>catherine.smith@example.com</email>
+        <phone>+1 (555) 018-4432</phone>
+        <salary>71000</salary>
+        <joiningDate>2020-01-10</joiningDate>
+    </employee>
+    <employee id="EMP104">
+        <name>David Lee</name>
+        <department>Engineering</department>
+        <designation>DevOps Engineer</designation>
+        <email>david.lee@example.com</email>
+        <phone>+1 (555) 012-7788</phone>
+        <salary>79000</salary>
+        <joiningDate>2023-05-20</joiningDate>
+    </employee>
+    <employee id="EMP105">
+        <name>Emma Watson</name>
+        <department>Finance</department>
+        <designation>Financial Analyst</designation>
+        <email>emma.watson@example.com</email>
+        <phone>+1 (555) 016-3341</phone>
+        <salary>68000</salary>
+        <joiningDate>2022-11-12</joiningDate>
+    </employee>
+    <employee id="EMP106">
+        <name>Frank Miller</name>
+        <department>Sales</department>
+        <designation>Sales Director</designation>
+        <email>frank.miller@example.com</email>
+        <phone>+1 (555) 011-5567</phone>
+        <salary>92000</salary>
+        <joiningDate>2019-09-01</joiningDate>
+    </employee>
+</company>
